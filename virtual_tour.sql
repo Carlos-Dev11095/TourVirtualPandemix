@@ -1,6 +1,6 @@
 /*
-SQLyog Professional v12.09 (64 bit)
-MySQL - 10.4.13-MariaDB : Database - virtual_tour
+SQLyog Professional v12.09 (32 bit)
+MySQL - 10.1.38-MariaDB : Database - virtual_tour
 *********************************************************************
 */
 
@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `autor`;
 CREATE TABLE `autor` (
   `id_autor` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) DEFAULT NULL,
-  `descripcion_autor` varchar(250) DEFAULT NULL,
+  `descripcion_autor` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id_autor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -54,7 +54,7 @@ CREATE TABLE `leyendas` (
   `id_leyenda` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(40) DEFAULT NULL,
   `origen` varchar(35) DEFAULT NULL,
-  `descripcion` varchar(250) DEFAULT NULL,
+  `descripcion` varchar(800) DEFAULT NULL,
   `enlace_img` varchar(75) DEFAULT NULL,
   PRIMARY KEY (`id_leyenda`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -74,7 +74,7 @@ CREATE TABLE `museos_y_sitios` (
   `horario_entrada` varchar(20) DEFAULT NULL,
   `horario_salida` varchar(20) DEFAULT NULL,
   `contacto` varchar(20) DEFAULT NULL,
-  `descripcion` varchar(250) DEFAULT NULL,
+  `descripcion` varchar(800) DEFAULT NULL,
   `enlace_img` varchar(75) DEFAULT NULL,
   PRIMARY KEY (`id_place`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -89,7 +89,7 @@ DROP TABLE IF EXISTS `obras`;
 
 CREATE TABLE `obras` (
   `id_obra` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(30) DEFAULT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
   `fecha_creacion` year(4) DEFAULT NULL,
   `descripcion` varchar(250) DEFAULT NULL,
   `enlace_img` varchar(75) DEFAULT NULL,
