@@ -82,8 +82,7 @@ include ("conexion.php");
 
           </div>
         </div>
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["enlace_img"];?>' alt="">*//enlace a imagen base de datos favor de borrar comentario//*
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/leyenda_lago_zirahuen.jpg" alt="">*//enlace a imagen temporal
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["enlace_img"];?>' alt="">
         <div class="product-item-description d-flex mr-auto">
           <div  class="bg-faded p-5 rounded">
             <p class="table__item" class="mb-0">
