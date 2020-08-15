@@ -77,22 +77,25 @@ include ("conexion.php");
         <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-            <span class="section-heading-lower"><?php echo $row["nombre"];?></span> 
+            
+            <span class="section-heading-lower">
+              <?php echo $row["nombre"];?>
+              </span> 
             
             </h2>
           </div>
         </div>
          <a href="6.obras.html">
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/casa-natal-de-morelos-0.jpg" alt=""></a>
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src='<?php echo $row["enlace_img"];?>'alt=""></a>
         <div class="product-item-description d-flex mr-auto">
           <div class="bg-faded p-5 rounded">
            <p class="table__item" class="mb-0">
 
-              <?php echo $row["direccion"];?>
-              <?php echo $row["horario_entrada"];?>
-              <?php echo $row["horario_salida"];?>
-              <?php echo $row["contacto"];?>
-              <?php echo $row["descripcion"];?>
+              <?php echo $row["direccion"];?><br>
+              <?php echo $row["horario_entrada"]." A ".$row["horario_salida"];?><br> 
+              
+              <?php echo $row["contacto"];?><br>
+              <?php echo $row["descripcion"];?><br>
               
               
           </div>
@@ -105,28 +108,17 @@ include ("conexion.php");
     <div class="container">
       <div class="product-item">
         <div class="product-item-title d-flex">
-          <div class="bg-faded p-5 d-flex mr-auto rounded">
+          
             <h2 class="section-heading mb-0">
-            <span class="section-heading-lower"><?php echo $row["nombre"];?></span>
+            <span class="section-heading-lower"> </span>
             </h2>
           </div>
         </div>
         <a href="6.obras.html">
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/palacio-clavijero.jpg" alt=""></a>
-        <div class="product-item-description d-flex ml-auto">
-          <div class="bg-faded p-5 rounded">
-            <p class="mb-0"><strong> Datos:<br>
+        </a>
+            <p class="mb-0"><strong><br>
 
-El Nigromante #79, Centro Histórico, Morelia.
 
-(443) 312 04 12 y 313 44 23
-
-Mar - dom: 10:00 - 18:00
-
-Entrada libre.</strong>
-<br>
-El Palacio Clavijero es uno de los más importantes monumentos arquitectónicos de la ciudad; su gran patio, con siete arcos en cada lado, es el mayor entre los edificios jesuitas de México. 
-</p>
           </div>
         </div>
       </div>
@@ -135,36 +127,28 @@ El Palacio Clavijero es uno de los más importantes monumentos arquitectónicos 
 
   <section class="page-section">
     <div class="container">
-      <div class="product-item">
+      
         <div class="product-item-title d-flex">
-          <div class="bg-faded p-5 d-flex ml-auto rounded">
-            <h2 class="section-heading mb-0">
-              <span class="section-heading-lower">Museo Regional Michoacano “Nicolás León”
-</span>
+          
+
+              <span class="section-heading-lower"> </span>
             </h2>
-          </div>
+          
         </div>
         <a href="6.obras.html">
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/museo-regional-michoacano-morelia.jpg" alt=""></a>
-        <div class="product-item-description d-flex mr-auto">
-          <div class="bg-faded p-5 rounded">
+      </a>
+        
             <p class="mb-0">
-            <strong>Datos:
-Allende #305 esq. con Abasolo, Centro Histórico, Morelia.
-+52 (443) 312 0407
-museo_michoacan@inah.gob.mx
-Martes a domingo: 9:00 am a 4:30 pm
-Entrada: $42.00.
-Martes a Sábado: entrada gratuita a menores de 13, mayores de 60; pensionados, jubilados, estudiantes y maestros con credencial vigente.
-Domingos: entrada gratuita a visitantes nacionales.</strong></br>
-Fundado oficialmente el 30 de enero de 1886, bajo la dirección del Dr. Nicolás León Calderón, el Museo Regional Michoacano es el más antiguo de la Red de Museos del Instituto Nacional de Antropología e Historia (INAH). El objetivo principal del Museo es exhibir las reliquias del pueblo tarasco y las producciones naturales del estado de Michoacán.
+            <strong>
 </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 <?php } ?> 
+
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <h4><p class="m-0 small">&copy; Pandemix derechos reservados 2020</h4> </br><h2><h4>información:</h4></p>

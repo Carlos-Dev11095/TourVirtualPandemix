@@ -2,7 +2,8 @@
 SQLyog Professional v12.09 (32 bit)
 MySQL - 10.1.38-MariaDB : Database - virtual_tour
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
