@@ -1,8 +1,8 @@
 <?php
 include ("conexion.php");
- $usuarios="select * from virtual_tour.leyendas";
+ $usuarios="select * from virtual_tour.obras";
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,8 @@ include ("conexion.php");
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>leyendas de la comunidad</title>
+
+  <title>obras</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +52,7 @@ include ("conexion.php");
             <a class="nav-link text-uppercase text-expanded" href="2.museos.php">MUSEOS</a>
           </li>
           <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="3.leyendas.php">LEYENDAS</a>
+            <a class="nav-link text-uppercase text-expanded" href="3.leyendas.php">LEYENDAS</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.html">CONTACTO</a>
@@ -68,38 +69,29 @@ include ("conexion.php");
   </nav>
 
 <?php $resultado= mysqli_query($conexion,$usuarios) or die(mysqli_error($conexion));
-
- while($row = mysqli_fetch_assoc($resultado))  {?>
+while($row = mysqli_fetch_assoc($resultado))  {?>
   <section class="page-section">
     <div class="container">
       <div class="product-item">
-        
+        <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-              <span class="section-heading-upper"><?php echo $row["origen"];?></span>            
-              <span class="section-heading-lower"><?php echo $row["nombre"];?></span>
+              <span class="section-heading-upper"></span>  
+              <span class="section-heading-lower"><?php echo $row["nombre_obra"];?></span>
+            </h2>
+          </div>
         </div>
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["enlace_img"];?>' alt="">
+       <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["enlace_img"];?>' width="600" height="600">
+
         <div class="product-item-description d-flex mr-auto">
-          <div  class="bg-faded p-5 rounded">
-            <p class="table__item" class="mb-0">
-              <?php echo $row["descripcion"];?>
-              
-              
-               
-  
-            </p>
+          <div class="bg-faded p-5 rounded">
+            <p class="mb-0"><br><?php echo $row["descripcion"];?>          <br><?php echo $row["nombre_obra"];?>//nombre autor y descripcion enlazadas de la bd de autor aun por realizar</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
-  <?php } ?>    
-  
-
+<?php } ?>
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <h4><p class="m-0 small">&copy; Pandemix derechos reservados 2020</h4> </br><h2><h4>información:</h4></p>
