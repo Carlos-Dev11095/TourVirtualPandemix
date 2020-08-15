@@ -1,9 +1,9 @@
-`autor`-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-08-2020 a las 08:30:55
+-- Tiempo de generación: 15-08-2020 a las 23:29:37
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -92,7 +92,7 @@ INSERT INTO `leyendas` (`id_leyenda`, `nombre`, `origen`, `descripcion`, `enlace
 CREATE TABLE `museos_y_sitios` (
   `id_place` int(11) NOT NULL,
   `nombre` varchar(50) DEFAULT NULL,
-  `direccion` varchar(60) DEFAULT NULL,
+  `direccion` varchar(100) DEFAULT NULL,
   `horario_entrada` varchar(20) DEFAULT NULL,
   `horario_salida` varchar(20) DEFAULT NULL,
   `contacto` varchar(20) DEFAULT NULL,
@@ -105,11 +105,11 @@ CREATE TABLE `museos_y_sitios` (
 --
 
 INSERT INTO `museos_y_sitios` (`id_place`, `nombre`, `direccion`, `horario_entrada`, `horario_salida`, `contacto`, `descripcion`, `enlace_img`) VALUES
-(1, 'CASA DE LA CULTURA', 'Calle: Av. Morelos Norte #485;Colonia:C', '09:00 AM', '19:00 PM', '443 688 4825', 'El edificio que actualmente conocemos con la Casa de la Cultura de Morelia inicia su historia en el año 1593 (en este 2017 cumple 424 años desde el inicio de su construcción) cuando los monjes carmelitas iniciaron la construcción del templo', 'img/museos/museocasacultura.jpg'),
+(1, 'CASA DE LA CULTURA', 'La Corregidora #113, esq. con García Obeso, Centro Histórico,', '09:00 AM', '19:00 PM', '443 688 4825', 'El edificio que actualmente conocemos con la Casa de la Cultura de Morelia inicia su historia en el año 1593 (en este 2017 cumple 424 años desde el inicio de su construcción) cuando los monjes carmelitas iniciaron la construcción del templo', 'img/museos/museocasacultura.jpg'),
 (2, 'MUSEO DEL DULCE', 'Av Francisco I. Madero Ote 440', '10:00 AM', '20:00 PM', '443 312 0477', 'Un museo dedicado al rescate histórico de los dulces tradicionales en Michoacán. Se encuentra dentro de la tienda Calle Real.Ofrece recorridos con un panorama general de la elaboración de este patrimonio gastronómico, desde su origen en las cocinas.', 'img/museos/museodulce.jpg'),
-(3, 'Museo de la Máscara', 'Calle: Av. Morelos Norte #485;', '09:00 AM', '19:00 PM', '443 688 4825', 'Ubicado en la Casa de la Cultura de Morelia, este museo alberga dos colecciones de máscaras, con 167 objetos provenientes de cerca de 20 estados de la República', 'img/museos/museomask.jpeg'),
-(4, 'MUSEO \"ALFREDO ZALCE\"', 'Av Acueducto 18, Centro histórico de Mor', '08:00 AM', '20:00 PM', '443 312 4544', 'El inmueble que ocupa el MACAZ es una mansión de fines del siglo XIX con dos niveles y rodeada de jardines. El museo fue fundado como galería de arte por un grupo de artistas de la entidad entre los cuales se encontraba J. Jesús Escalera y Manuel Aguilar de la Torre, inaugurándose el 30 de septiembre de 1971 con el nombre de “Galería de Arte Contemporáneo de Michoacán”.', 'img/museos/mueso-alfredo-zalce.jpg'),
-(5, 'Museo de los Residuos \"SOS\"', 'Perif. Paseo de la República 5500, Col. ', '09:00 AM', '15:00 PM', '443 327 4677', 'Un museo fundado en el año 2016 por Gustavo González. El museo brinda información y asesoramiento sobre el manejo de residuos, a través de 11 escenarios, como el de la selva del relleno sanitario, en donde se muestra y se detalla su funcionamiento. Cuenta con 19 esculturas elaboradas con desechos, talleres de composta, reciclaje, lombricomposta, entre otros. La Lotería es otro juego muy famoso dentro del museo, ya que mientras aprenden sobre calentamiento global, se divierten y conviven con las demás personas.', 'img/museos/sosMuseo.jpg'),
+(3, 'MUSEO CASA NATAL DE MORELOS', 'Av Morelos Nte 485, Centro histórico de Morelia, 58000 Morelia, Mich.', '09:00 AM', '19:00 PM', '443 688 4825', 'Es un edificio histórico de estilo neoclásico, es el lugar donde nació, el 30 de septiembre de 1765, el héroe de la Independencia de México, José María Teclo Morelos Pérez y Pavón, mejor conocido como José María Morelos y Pavón.', 'img/museos/museo_morelos.jpg'),
+(4, 'MUSEO \"ALFREDO ZALCE\"', 'Av Acueducto 18, Centro histórico de Morelia, 58000 Morelia, Mich.', '08:00 AM', '20:00 PM', '443 312 4544', 'El inmueble que ocupa el MACAZ es una mansión de fines del siglo XIX con dos niveles y rodeada de jardines. El museo fue fundado como galería de arte por un grupo de artistas de la entidad entre los cuales se encontraba J. Jesús Escalera y Manuel Aguilar de la Torre, inaugurándose el 30 de septiembre de 1971 con el nombre de “Galería de Arte Contemporáneo de Michoacán”.', 'img/museos/mueso-alfredo-zalce.jpg'),
+(5, 'Museo de los Residuos \"SOS\"', 'Perif. Paseo de la República 6500, Lago 1, 58115 Morelia, Mich.', '09:00 AM', '15:00 PM', '443 327 4677', 'Un museo fundado en el año 2016 por Gustavo González. El museo brinda información y asesoramiento sobre el manejo de residuos, a través de 11 escenarios, como el de la selva del relleno sanitario, en donde se muestra y se detalla su funcionamiento. Cuenta con 19 esculturas elaboradas con desechos, talleres de composta, reciclaje, lombricomposta, entre otros. La Lotería es otro juego muy famoso dentro del museo, ya que mientras aprenden sobre calentamiento global, se divierten y conviven con las demás personas.', 'img/museos/sosMuseo.jpg'),
 (6, 'Museo de Arte Colonial', '•	Benito Juárez #240, Centro Histórico, ', '09:00 AM', '19:00 PM', '443 313 9260', 'El Museo de Arte Colonial (MAC) en Morelia puede parecer pequeño en tamaño pero ostenta un extraordinario valor por los documentos, libros antiguos, ornamentos religiosos, pinturas y mapas de la época virreinal, que se exhiben en sus salas. La sede del museo es una casona barroca de la época colonial del siglo XVIII, un edificio de valor histórico y arquitectónico, adaptado al estilo neoclásico durante el siglo XIX. En este lugar, en el año de 1821, se instaló la primera imprenta de la ciudad, la cual estuvo dirigida por don Luis Arango.', 'img/museos/MuseoArteCol.jpg');
 
 -- --------------------------------------------------------
@@ -133,16 +133,16 @@ CREATE TABLE `obras` (
 --
 
 INSERT INTO `obras` (`id_obra`, `nombre_obra`, `fecha_creacion`, `descripcion`, `id_aut`, `id_mus`, `enlace_img`) VALUES
-(1, '\"el sentido\"', 2012, 'Óleo sobre tela', 1, 1, 'img\\obra\\El_Sentido.jpg'),
-(3, 'Fray Bartolomé de las Casas', 0000, 'Oleo sobre tela', 1, 1, 'img/obra/Estandarte.jpeg'),
-(4, 'El joven Zapata', 1993, 'Oleo sobre tela', 2, 2, NULL),
-(8, 'Máscara del demonio ', 2000, 'Elaborado en Tócuaro. Esta pieza de arte conquistan al más escéptico. El diablo como figura principal, con insectos, cuernos y extremidades varias hacen de esta una artesanía excepcional.', 3, 3, NULL),
-(9, 'Mascara Danza de los viejitos', 2000, 'Su origen nos lleva a la Isla de Jarácuaro, dentro del lago de Pátzcuaro, durante la época prehispánica, cuando formaba parte del ritual en honor al Dios Viejo, Dios del Fuego o Dios Sol.', 3, 3, NULL),
-(10, 'Morelos y la Justicia', 1976, 'Mural titulado “Morelos y la Justicia” realizado en 1976. La obra representa a José María Morelos y Pavón héroe de la Independencia de México originario de Valladolid Morelia.', 4, 4, NULL),
-(11, '“Acróbata” y “Bailarinas”', 1995, 'Numerada como la segunda de una serie de 10, “Mujer” fue integrada al acervo artístico del MACAZ el 18 de mayo de 1999, a la par de las piezas coetáneas tituladas “Acróbata” y “Bailarinas”.', 5, 4, NULL),
-(12, 'Hulefante', 2015, 'Se refiere a una escultura de un elefante armada en el año 2015 por gustavo gonzalez  esta constituida principalmente por residuos de llantas y es la obra principal y la que causo la fundación de el museo se expone con la frase incluso en la basura s', 6, 5, NULL),
-(14, 'Cristo Negro', 0000, 'El cristo negro data de épocas coloniales y fue hecho por  nativos en la época  de la colonia fue renovado y llego al museo en el año 2009  añadiendo placas en la parte trasera protegiéndolo ', 7, 6, NULL),
-(15, 'Cristo de pasta de caña', 2000, 'EL MUSEO  POSEE UNA GRAN COLLECCION DE CRISTOS DE CAÑA La sala uno resguarda distintas esculturas en caña de maíz, técnica que surge en el territorio del imperio purépecha, con la cual los antiguos indígenas fabricaban las representaciones de sus div', 7, 6, NULL);
+(1, '\"el sentido\"', 2012, 'Óleo sobre tela', 1, 1, 'img/obras/El_Sentido.jpg'),
+(2, 'Fray Bartolomé de las Casas', 0000, 'Oleo sobre tela', 1, 1, 'img/obras/obra_barto.jpg'),
+(3, 'El joven Zapata', 1993, 'Oleo sobre tela', 2, 2, 'img/obras/obra_zapata.jpg'),
+(4, 'BUSTO DE MORELOS', 2000, 'Elaborado en Tócuaro. Esta pieza de arte conquistan al más escéptico. El diablo como figura principal, con insectos, cuernos y extremidades varias hacen de esta una artesanía excepcional.', 3, 3, 'img/obras/obra_bstmorel.jpg'),
+(5, 'Mascara Danza de los viejitos', 2000, 'Su origen nos lleva a la Isla de Jarácuaro, dentro del lago de Pátzcuaro, durante la época prehispánica, cuando formaba parte del ritual en honor al Dios Viejo, Dios del Fuego o Dios Sol.', 3, 3, 'img/obras/obra__masc_viej.jpeg'),
+(6, 'Morelos y la Justicia', 1976, 'Mural titulado “Morelos y la Justicia” realizado en 1976. La obra representa a José María Morelos y Pavón héroe de la Independencia de México originario de Valladolid Morelia.', 4, 4, 'img/obras/obra_morelos.jpeg'),
+(7, '“Acróbata” y “Bailarinas”', 1995, 'Numerada como la segunda de una serie de 10, “Mujer” fue integrada al acervo artístico del MACAZ el 18 de mayo de 1999, a la par de las piezas coetáneas tituladas “Acróbata” y “Bailarinas”.', 5, 4, 'img/obras/obra_acrob.jpeg'),
+(8, 'Hulefante', 2015, 'Se refiere a una escultura de un elefante armada en el año 2015 por gustavo gonzalez  esta constituida principalmente por residuos de llantas y es la obra principal y la que causo la fundación de el museo se expone con la frase incluso en la basura s', 6, 5, 'img/obras/obra_Hulefante.jpg'),
+(9, 'Cristo Negro', 0000, 'El cristo negro data de épocas coloniales y fue hecho por  nativos en la época  de la colonia fue renovado y llego al museo en el año 2009  añadiendo placas en la parte trasera protegiéndolo ', 7, 6, 'img/obras/obra_yisusnigga.jpg'),
+(10, 'Cristo de pasta de caña', 2000, 'EL MUSEO  POSEE UNA GRAN COLLECCION DE CRISTOS DE CAÑA La sala uno resguarda distintas esculturas en caña de maíz, técnica que surge en el territorio del imperio purépecha, con la cual los antiguos indígenas fabricaban las representaciones de sus div', 7, 6, 'img/obras/obra_CristoPastadeCana.jpg');
 
 -- --------------------------------------------------------
 
@@ -157,6 +157,13 @@ CREATE TABLE `usuarios` (
   `contraseña` varchar(20) DEFAULT NULL,
   `rango` varchar(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_user`, `nombre`, `e_mail`, `contraseña`, `rango`) VALUES
+(1, NULL, NULL, NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -233,13 +240,13 @@ ALTER TABLE `museos_y_sitios`
 -- AUTO_INCREMENT de la tabla `obras`
 --
 ALTER TABLE `obras`
-  MODIFY `id_obra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_obra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
