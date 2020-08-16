@@ -1,6 +1,6 @@
 <?php
 include ("conexion.php");
- $usuarios="select * from virtual_tour.obras";
+ $usuarios="select * from virtual_tour.obras inner join virtual_tour.autor;";
 ?>
 
 <!DOCTYPE html>
@@ -76,16 +76,21 @@ while($row = mysqli_fetch_assoc($resultado))  {?>
         <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-              <span class="section-heading-upper"></span>  
+              <span class="section-heading-upper"><?php echo $row["nombre_autor"];?></span>  
               <span class="section-heading-lower"><?php echo $row["nombre_obra"];?></span>
             </h2>
           </div>
         </div>
-       <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["enlace_img"];?>' width="600" height="600">
+       <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["img_obra"];?>' width="800" height="800">
 
         <div class="product-item-description d-flex mr-auto">
           <div class="bg-faded p-5 rounded">
-            <p class="mb-0"><br><?php echo $row["descripcion"];?>          <br><?php echo $row["nombre_obra"];?>//nombre autor y descripcion enlazadas de la bd de autor aun por realizar</p>
+          
+            <p class="mb-0"><h3>Descripcion:</h3><br><?php echo $row["descripcion_obra"];?><br>
+            <H4><?php echo $row["nombre_autor"];?></H4>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["img_autor"];?>' width="400" height="400">
+
+                      
           </div>
         </div>
       </div>
