@@ -49,10 +49,10 @@ include ("conexion.php");
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="2.museos.html">MUSEOS</a>
+            <a class="nav-link text-uppercase text-expanded" href="2.museos.php">MUSEOS</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="3.leyendas.html">LEYENDAS</a>
+            <a class="nav-link text-uppercase text-expanded" href="3.leyendas.php">LEYENDAS</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.html">CONTACTO</a>
@@ -85,7 +85,7 @@ include ("conexion.php");
             </h2>
           </div>
         </div>
-         <a href="6.obras.html">
+         <a href="6.Obras.php">
         <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src='<?php echo $row["enlace_img"];?>'alt=""></a>
         <div class="product-item-description d-flex mr-auto">
           <div class="bg-faded p-5 rounded">
@@ -116,7 +116,7 @@ include ("conexion.php");
         </div>
         <a href="6.obras.html">
         </a>
-            <p class="mb-0"><strong><br>
+            <p class="mb-0"><br>
 
 
           </div>
@@ -139,7 +139,7 @@ include ("conexion.php");
       </a>
         
             <p class="mb-0">
-            <strong>
+    
 </p>
           </div>
         </div>
@@ -161,13 +161,13 @@ Facebook: Casi todo el tiempo
      </br><a href="4.contacto.html">información de contacto </a>
       
       </br><h4>síguenos:</h4></p>
-      <a href="http://www.facebook.com"><img src="img/fb.jpg" width="70" height="70"></a>
+      <a href="http://www.facebook.com"><img src="img/bt_redes_soc/fb.jpg" width="70" height="70"></a>
       
-      <a href="http://www.youtube.com"><img src="img/yt.jpg" width="70" height="70"></a>
+      <a href="http://www.youtube.com"><img src="img/bt_redes_soc/yt.jpg" width="70" height="70"></a>
       
-      <a href="http://www.instagram.com"><img src="img/insta.jpg" width="70" height="70"></a>
+      <a href="http://www.instagram.com"><img src="img/bt_redes_soc/insta.jpg" width="70" height="70"></a>
       
-      <a href="http://www.twitter.com"><img src="img/tw.jpg" width="70" height="70"></a>
+      <a href="http://www.twitter.com"><img src="img/bt_redes_soc/tw.jpg" width="70" height="70"></a>
       
     </div>
   </footer>
