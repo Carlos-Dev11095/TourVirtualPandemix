@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-08-2020 a las 23:29:37
+-- Tiempo de generación: 16-08-2020 a las 04:44:09
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -31,21 +31,24 @@ CREATE TABLE `autor` (
   `id_autor` int(11) NOT NULL,
   `nombre_autor` varchar(50) DEFAULT NULL,
   `descripcion_autor` varchar(500) DEFAULT NULL,
-  `enlace_img` varchar(75) DEFAULT NULL
+  `img_autor` varchar(75) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `autor`
 --
 
-INSERT INTO `autor` (`id_autor`, `nombre_autor`, `descripcion_autor`, `enlace_img`) VALUES
-(1, 'Arturo Pérez Morelos', 'Nació en la ciudad de Morelia, Michoacán; el 17 de noviembre de 1845 y falleció en el año 1919 en Tacubaya, Cd. De México, sus padres fueron D. Mariano Ramón Parra y doña Juliana Hernández. En las escuelas donde cursó su instrucción primaria ya daba ', 'El_Sentido.jpg'),
-(2, 'Alfredo Arreguín ', 'Nació en Morelia en 1935, siendo un joven migró a los Estados Unidos en donde realizó estudios de arte en la Universidad de Washington. Desde 1956 es reconocido internacionalmente como artista por sus vibrantes y cautivadoras pinturas. En voz propia,', NULL),
-(3, 'Autor Desconocido', 'Su autor es desconocido, la obra fue recuperada y resguardada en el museo.', NULL),
-(4, 'Agustín Cárdenas Castro', 'Agustín Cárdenas Castro nació en la comunidad de Patamban municipio de Tangancícuaro el 3 de octubre de 1936. Creador michoacano prolífico en el ámbito de la música y las artes plásticas. En la Ciudad de México tomó clases en la Academia de San Carlos, y cátedras particulares con artistas de la talla de Armando García Núñez y Diego Rivera. Discípulo también del maestro Alfredo Salce.', NULL),
-(5, 'Alfredo Zalce Torres', 'Nació en Pátzcuaro, Michoacán, el 12 de enero de 1908. Se le considera como uno de los pilares del muralismo en México y una de las figuras del arte moderno mexicano. Era uno de los artistas más versátiles de México, pues abordaba diferentes técnicas para producir su obra como óleo, acrílico, batik, lápiz, tinta, acuarela, temple, pastel, collage, grabado, serigrafía, gráfica, litografía, bronce, piedra, pastel, cerámica, monotipo, y demás. ', NULL),
-(6, 'Gustavo González Valadez', 'Coordinador del programa S.O.S,ofrece información, orientación y talleres para minimizar la generación de residuos y sus efectos adversos al medio ambiente y la salud. ', NULL),
-(7, 'Artistas desconocidos', 'No se conoce el grupo de artistas, la obra fue recuperada y resguardada en el museo', NULL);
+INSERT INTO `autor` (`id_autor`, `nombre_autor`, `descripcion_autor`, `img_autor`) VALUES
+(1, 'Arturo Pérez Morelos', 'Nació en la ciudad de Morelia, Michoacán; el 17 de noviembre de 1970', 'img/autor_obra/alf.jpg'),
+(2, 'Alfredo Arreguín ', 'Nació en Morelia en 1935, siendo un joven migró a los Estados Unidos en donde realizó estudios de arte en la Universidad de Washington. Desde 1956 es reconocido internacionalmente como artista por sus vibrantes y cautivadoras pinturas. En voz propia,', 'img/autor_obra/alfr_arre.jpg'),
+(3, '\r\nfelix parra', 'Su autor es desconocido, la obra fue recuperada y resguardada en el museo.', 'img/autor_obra/unnamed.png'),
+(4, 'Agustín Cárdenas Castro', 'Agustín Cárdenas Castro nació en la comunidad de Patamban municipio de Tangancícuaro el 3 de octubre de 1936. Creador michoacano prolífico en el ámbito de la música y las artes plásticas. En la Ciudad de México tomó clases en la Academia de San Carlos, y cátedras particulares con artistas de la talla de Armando García Núñez y Diego Rivera. Discípulo también del maestro Alfredo Salce.', 'img/autor_obra/agus.jpg'),
+(5, 'Gustavo González Valadez', 'Coordinador del programa S.O.S,ofrece información, orientación y talleres para minimizar la generación de residuos y sus efectos adversos al medio ambiente y la salud. ', 'img/autor_obra/gus.jpg'),
+(6, 'Alfredo Zalce', ' fue un artista plástico mexicano, una de las figuras líderes del arte moderno mexicano. ', 'img/autor_obra/alfredzal.jpg'),
+(7, 'Artistas desconocidos', 'No se conoce el grupo de artistas, la obra fue recuperada y resguardada en el museo', 'img/autor_obra/unnamed.png'),
+(8, 'artista desconocido', 'No se conoce el artista', 'img/autor_obra/unnamed.png'),
+(9, 'anonimo', 'desconocido', 'img/autor_obra/unnamed.png'),
+(10, 'sin autor', 'obra de autor desconocido', 'img/autor_obra/unnamed.png');
 
 -- --------------------------------------------------------
 
@@ -122,27 +125,27 @@ CREATE TABLE `obras` (
   `id_obra` int(11) NOT NULL,
   `nombre_obra` varchar(50) DEFAULT NULL,
   `fecha_creacion` year(4) DEFAULT NULL,
-  `descripcion` varchar(250) DEFAULT NULL,
+  `descripcion_obra` varchar(250) DEFAULT NULL,
   `id_aut` int(11) NOT NULL,
   `id_mus` int(11) NOT NULL,
-  `enlace_img` varchar(75) DEFAULT NULL
+  `img_obra` varchar(75) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `obras`
 --
 
-INSERT INTO `obras` (`id_obra`, `nombre_obra`, `fecha_creacion`, `descripcion`, `id_aut`, `id_mus`, `enlace_img`) VALUES
-(1, '\"el sentido\"', 2012, 'Óleo sobre tela', 1, 1, 'img/obras/El_Sentido.jpg'),
-(2, 'Fray Bartolomé de las Casas', 0000, 'Oleo sobre tela', 1, 1, 'img/obras/obra_barto.jpg'),
-(3, 'El joven Zapata', 1993, 'Oleo sobre tela', 2, 2, 'img/obras/obra_zapata.jpg'),
-(4, 'BUSTO DE MORELOS', 2000, 'Elaborado en Tócuaro. Esta pieza de arte conquistan al más escéptico. El diablo como figura principal, con insectos, cuernos y extremidades varias hacen de esta una artesanía excepcional.', 3, 3, 'img/obras/obra_bstmorel.jpg'),
-(5, 'Mascara Danza de los viejitos', 2000, 'Su origen nos lleva a la Isla de Jarácuaro, dentro del lago de Pátzcuaro, durante la época prehispánica, cuando formaba parte del ritual en honor al Dios Viejo, Dios del Fuego o Dios Sol.', 3, 3, 'img/obras/obra__masc_viej.jpeg'),
-(6, 'Morelos y la Justicia', 1976, 'Mural titulado “Morelos y la Justicia” realizado en 1976. La obra representa a José María Morelos y Pavón héroe de la Independencia de México originario de Valladolid Morelia.', 4, 4, 'img/obras/obra_morelos.jpeg'),
-(7, '“Acróbata” y “Bailarinas”', 1995, 'Numerada como la segunda de una serie de 10, “Mujer” fue integrada al acervo artístico del MACAZ el 18 de mayo de 1999, a la par de las piezas coetáneas tituladas “Acróbata” y “Bailarinas”.', 5, 4, 'img/obras/obra_acrob.jpeg'),
-(8, 'Hulefante', 2015, 'Se refiere a una escultura de un elefante armada en el año 2015 por gustavo gonzalez  esta constituida principalmente por residuos de llantas y es la obra principal y la que causo la fundación de el museo se expone con la frase incluso en la basura s', 6, 5, 'img/obras/obra_Hulefante.jpg'),
-(9, 'Cristo Negro', 0000, 'El cristo negro data de épocas coloniales y fue hecho por  nativos en la época  de la colonia fue renovado y llego al museo en el año 2009  añadiendo placas en la parte trasera protegiéndolo ', 7, 6, 'img/obras/obra_yisusnigga.jpg'),
-(10, 'Cristo de pasta de caña', 2000, 'EL MUSEO  POSEE UNA GRAN COLLECCION DE CRISTOS DE CAÑA La sala uno resguarda distintas esculturas en caña de maíz, técnica que surge en el territorio del imperio purépecha, con la cual los antiguos indígenas fabricaban las representaciones de sus div', 7, 6, 'img/obras/obra_CristoPastadeCana.jpg');
+INSERT INTO `obras` (`id_obra`, `nombre_obra`, `fecha_creacion`, `descripcion_obra`, `id_aut`, `id_mus`, `img_obra`) VALUES
+(1, '\"el sentido\"', 2012, 'Óleo sobre tela', 1, 1, 'img/obras/obra_El_Sentido.jpg'),
+(2, 'El joven Zapata', 1993, 'Oleo sobre tela', 2, 2, 'img/obras/obra_zapata.jpg'),
+(3, 'Fray Bartolomé de las Casas', 1919, 'Oleo sobre tela', 1, 1, 'img/obras/obra_barto.jpg'),
+(4, 'Morelos y la Justicia', 1976, 'Mural titulado “Morelos y la Justicia” realizado en 1976. La obra representa a José María Morelos y Pavón héroe de la Independencia de México originario de Valladolid Morelia.', 4, 4, 'img/obras/obra_morelos.jpeg'),
+(5, 'Hulefante', 2015, 'Se refiere a una escultura de un elefante armada en el año 2015 por gustavo gonzalez  esta constituida principalmente por residuos de llantas y es la obra principal y la que causo la fundación de el museo se expone con la frase incluso en la basura s', 6, 5, 'img/obras/obra_Hulefante.jpg'),
+(6, '“Acróbata” y “Bailarinas”', 1995, 'Numerada como la segunda de una serie de 10, “Mujer” fue integrada al acervo artístico del MACAZ el 18 de mayo de 1999, a la par de las piezas coetáneas tituladas “Acróbata” y “Bailarinas”.', 5, 4, 'img/obras/obra_acrob.jpeg'),
+(7, 'Mascara Danza de los viejitos', 2000, 'Su origen nos lleva a la Isla de Jarácuaro, dentro del lago de Pátzcuaro, durante la época prehispánica, cuando formaba parte del ritual en honor al Dios Viejo, Dios del Fuego o Dios Sol.', 3, 3, 'img/obras/obra__masc_viej.jpeg'),
+(8, 'Cristo de pasta de caña', 2000, 'EL MUSEO  POSEE UNA GRAN COLLECCION DE CRISTOS DE CAÑA La sala uno resguarda distintas esculturas en caña de maíz, técnica que surge en el territorio del imperio purépecha, con la cual los antiguos indígenas fabricaban las representaciones de sus div', 7, 6, 'img/obras/obra_CristoPastadeCana.jpg'),
+(9, 'BUSTO DE MORELOS', 2000, 'Elaborado en Tócuaro. Esta pieza de arte conquistan al más escéptico. El diablo como figura principal, con insectos, cuernos y extremidades varias hacen de esta una artesanía excepcional.', 3, 3, 'img/obras/obra_bstmorel.jpg'),
+(10, 'Cristo Negro', 0000, 'El cristo negro data de épocas coloniales y fue hecho por  nativos en la época  de la colonia fue renovado y llego al museo en el año 2009  añadiendo placas en la parte trasera protegiéndolo ', 7, 6, 'img/obras/obra_yisusnigga.jpg');
 
 -- --------------------------------------------------------
 
@@ -216,7 +219,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT de la tabla `comentarios`
@@ -240,7 +243,7 @@ ALTER TABLE `museos_y_sitios`
 -- AUTO_INCREMENT de la tabla `obras`
 --
 ALTER TABLE `obras`
-  MODIFY `id_obra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id_obra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=901;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
