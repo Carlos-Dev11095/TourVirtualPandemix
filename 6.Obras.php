@@ -1,10 +1,7 @@
 <?php
 include ("conexion.php");
-<<<<<<< HEAD
+
  $usuarios="select * from virtual_tour.obras inner join virtual_tour.autor on obras.id_aut=autor.id_autor;";
-=======
- $usuarios="select * from virtual_tour.obras INNER JOIN virtual_tour.autor ON obras.id_aut=autor.id_autor";
->>>>>>> c7bf949800b7df658a8c145ff3a4bc51753d106d
 ?>
 
 <!DOCTYPE html>
