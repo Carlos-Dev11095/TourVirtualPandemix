@@ -55,7 +55,7 @@ include ("conexion.php");
             <a class="nav-link text-uppercase text-expanded" href="3.leyendas.php">LEYENDAS</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="4.contacto.html">CONTACTO</a>
+            <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="1.index.html">REGISTRATE</a>
