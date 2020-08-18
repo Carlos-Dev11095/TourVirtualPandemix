@@ -23,6 +23,11 @@
   </head>
 
   <body>
+<!-- SDK comentarios para JavaScript-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="zORbOCUd"></script>
+
+
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3">Museos de Morelia</span>
@@ -139,6 +144,14 @@
         </div>
       </div>
     </section>
+
+
+
+    <div class="fb-comments" data-href="https://www.facebook.com/Museos-de-Morelia-100566675104936" data-numposts="5" data-width="100%" colorscheme="light"></div>
+
+
+
+
 
     <footer class="footer text-faded text-center py-5">
     <div class="container">
