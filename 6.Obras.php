@@ -77,7 +77,9 @@ while($row = mysqli_fetch_assoc($resultado))  {?>
         <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-              <span class="section-heading-upper"><?php echo $row["nombre_autor"];?></span>  
+              <span class="section-heading-upper"><?php echo $row["nombre_autor"];?>
+                <?php echo $row["id_autor"];?>
+              </span>  
               <span class="section-heading-lower"><?php echo $row["nombre_obra"];?></span>
             </h2>
           </div>
