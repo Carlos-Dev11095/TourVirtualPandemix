@@ -2,15 +2,16 @@
 include ("conexion.php");
 
 $nombre = $_POST["nombre"];
-$contraseña = $_POST["password"];
+$password = $_POST["password"];
 $Email = $_POST["correo"];
+$rango = "reg";
 
-$insertar = "INSERT INTO usuarios(nombre, e_mail, contraseña) VALUES ('$nombre', '$Email', '$contraseña')"; 
-$resultado = mysql_query($conexion, $insertar);
+$insertar = "INSERT INTO usuarios(nombre,e_mail,password,rango) VALUES ($nombre, $Email, $password,$rango);";
+$resultado = mysqli_query($conexion, $insertar);
 if($resultado) {
-	echo "<script>alert('se ha regstrado con exito');
-	window.location='/Tabla-datos-grid'</script>";
+	header('Location:1.index.html');
 }else {
 	echo "<script>alert(no se pudo registrar);window.history.go(-1);</script>";
+	header('Location:5.registro.html');
 }
 ?>
