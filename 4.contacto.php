@@ -31,18 +31,18 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3">Museos de Morelia</span>
-      <span class="site-heading-lower">Obras a través de el tiempo </span>
+      <span class="site-heading-lower">Obras a través del tiempo </span>
     </h1>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">CONTACTO</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">PANDEMIX VIRTUAL TOUR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="1.index.html">INICIO
               <span class="sr-only">(current)</span>
@@ -61,12 +61,12 @@
             <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="7.cesion.html">INICIA SESION</a>
+            <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
           </li>
         </ul>
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <section class="page-section cta">
       <div class="container">
@@ -129,7 +129,8 @@
 
     <section class="page-section about-heading">
       <div class="container">
-        <center><img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/pandemix.jpg"width="200" height="200"></center>
+        <center><img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/pandemix.jpg"width="400" height="400"></center>
+        <br>
         <div class="about-heading-content">
           <div class="row">
             <div class="col-xl-9 col-lg-10 mx-auto">
