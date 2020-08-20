@@ -4,7 +4,7 @@ include ("conexion.php");
 ?>
  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -30,13 +30,13 @@ include ("conexion.php");
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Museos de Morelia</span>
-    <span class="site-heading-lower">Obras a través de el tiempo</span>
+    <span class="site-heading-lower">Obras a través del tiempo</span>
   </h1>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">LEYENDAS</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">PANDEMIX VIRTUAL TOUR</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,16 +51,16 @@ include ("conexion.php");
             <a class="nav-link text-uppercase text-expanded" href="2.museos.php">MUSEOS</a>
           </li>
           <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="3.leyendas.php">LEYENDAS</a>
+            <a class="nav-link text-uppercase text-expanded" href="3.leyendas.php">LEYENDAS</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="1.index.html">REGISTRATE</a>
+            <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="1.index.html">INICIA SESION</a>
+            <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
           </li>
         </ul>
       </div>
@@ -109,7 +109,7 @@ Sábado 9:00 a 14:00
 Facebook: Casi todo el tiempo
 
 
-     </br><a href="4.contacto.html">información de contacto </a>
+     </br><a href="4.contacto.php">información de contacto </a>
       
       </br><h4>síguenos:</h4></p>
       <a href="http://www.facebook.com"><img src="img/bt_redes_soc/fb.jpg" width="70" height="70"></a>
