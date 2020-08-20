@@ -3,6 +3,11 @@ include ("conexion.php");
  $usuarios="select * from virtual_tour.museos_y_sitios";
 ?>
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
