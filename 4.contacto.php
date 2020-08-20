@@ -163,7 +163,7 @@ Sábado 9:00 a 14:00
 Facebook: Casi todo el tiempo
 
 
-     </br><a href="4.contacto.html">información de contacto </a>
+     </br><a href="4.contacto.php">información de contacto </a>
       
       </br><h4>síguenos:</h4></p>
       <a href="http://www.facebook.com"><img src="img/bt_redes_soc/fb.jpg" width="70" height="70"></a>
