@@ -1,7 +1,8 @@
 <?php
 include ("conexion.php");
+$id= $_GET["id"];
 
- $usuarios="select * from virtual_tour.obras inner join virtual_tour.autor on obras.id_aut=autor.id_autor;";
+ $usuarios="select * from virtual_tour.obras INNER JOIN virtual_tour.autor ON obras.id_autor=autor.id_autor INNER JOIN virtual_tour.museos_y_sitios ON obras.`id_museo`=museos_y_sitios.`id_museo` WHERE obras.`id_museo`='$id';";
 ?>
 
 <!DOCTYPE html>
@@ -77,8 +78,9 @@ while($row = mysqli_fetch_assoc($resultado))  {?>
         <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-              <span class="section-heading-upper"><?php echo $row["nombre_autor"];?>
-                <?php echo $row["id_autor"];?>
+              <span class="section-heading-upper">
+                <?php echo $row["nombre_autor"];?>
+                
               </span>  
               <span class="section-heading-lower"><?php echo $row["nombre_obra"];?></span>
             </h2>

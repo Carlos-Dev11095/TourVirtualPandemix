@@ -90,7 +90,7 @@ include ("conexion.php");
             </h2>
           </div>
         </div>
-         <a href="6.Obras.php">
+         <a href="6.Obras.php?id=<?php echo $row["id_museo"];?>">
         <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src='<?php echo $row["enlace_img"];?>'alt=""></a>
         <div class="product-item-description d-flex mr-auto">
           <div class="bg-faded p-5 rounded">
