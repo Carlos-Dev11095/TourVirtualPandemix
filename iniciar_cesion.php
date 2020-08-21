@@ -1,20 +1,25 @@
 <?php
-require 'conexion.php';
 session_start();
-
+include ("conexion.php");
 $correo = $_POST['correo'];
-$password = $_POST['password']
+$password = $_POST['password'];
+$_SESSION['user'] = $correo;
 
-$q = "SELECT COUNT(*) as contar from virtual_tour.usuarios where e_mail = '$correo' and password = '$password'";
-$consulta = msqli_query($conexion,$q);
-$array = msqli_fetch_array($consulta);
+$verifica = "SELECT COUNT(*) as contar from virtual_tour.usuarios where e_mail = '$correo' and password = '$password';";
+$consulta = mysqli_query($conexion,$verifica);
+$array = mysqli_fetch_array($consulta);
+if(!$consulta) {
+    var_dump(mysqli_error($conexion));
+    exit;
+}
+
 
 if ($array['contar']>0){
-	header("location:index.html")
- $_SESSION['user'] = $correo
- alert('secion iniciada');
+	header("location:1.index.html");
+ $_SESSION['user'] = $correo ;
+ echo "<script>alert('secion iniciada')</script>";
 }else{
-	alert('datos incorrectos');
+	echo "<script>alert('datos incorrectos')</script>";
 }
 
 ?>
