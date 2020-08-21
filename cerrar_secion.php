@@ -3,7 +3,7 @@
 
  $varsesion = $_SESSION['user'];
  if($varsesion == null || $varsesion = ''){
-	echo 'registrese para usar esta opcion esta pagina';
+	echo "<script>alert('debes registrarte para iniciar secion')</script>";
 	die();
 	}
 

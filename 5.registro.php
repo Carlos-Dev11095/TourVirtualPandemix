@@ -1,3 +1,12 @@
+<?php
+include ("conexion.php");
+session_start();
+ $varsesion = $_SESSION['user'];
+ if($varsesion != null ){
+  echo "<script>alert('cierra tu secion actual para registrar una cuenta nueva')</script>";
+  die();
+  }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +57,7 @@
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
+            <a class="nav-link text-uppercase text-expanded" href="5.registro.php">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>

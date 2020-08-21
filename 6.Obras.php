@@ -1,5 +1,11 @@
 <?php
 include ("conexion.php");
+session_start();
+ $varsesion = $_SESSION['user'];
+ if($varsesion == null || $varsesion = ''){
+  echo "<script>alert('debes registrarte para ver esta pagina')</script>";
+  die();
+  }
 $id= $_GET["id"];
 
  $usuarios="select * from virtual_tour.obras INNER JOIN virtual_tour.autor ON obras.id_autor=autor.id_autor INNER JOIN virtual_tour.museos_y_sitios ON obras.`id_museo`=museos_y_sitios.`id_museo` WHERE obras.`id_museo`='$id';";
@@ -60,7 +66,7 @@ $id= $_GET["id"];
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
+            <a class="nav-link text-uppercase text-expanded" href="5.registro.php">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
