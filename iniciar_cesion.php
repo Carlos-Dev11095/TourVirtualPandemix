@@ -17,7 +17,7 @@ if(!$consulta) {
 if ($array['contar']>0){
 	header("location:1.index.html");
  $_SESSION['user'] = $correo ;
- echo "<script>alert('secion iniciada')</script>";
+ echo "<script>alert('sesion iniciada')</script>";
 }else{
 	echo "<script>alert('datos incorrectos')</script>";
 }

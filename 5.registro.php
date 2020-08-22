@@ -61,6 +61,9 @@ session_start();
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
+            <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
+          </li>
           </li>
         </ul>
       </div>

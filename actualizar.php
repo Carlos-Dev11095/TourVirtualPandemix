@@ -1,45 +1,30 @@
 <?php
 include ("conexion.php");
- $usuarios="select * from virtual_tour.museos_y_sitios";
+$id=$_GET["id"];
+ $usuarios="select * from virtual_tour.usuarios WHERE id_usuario='$id'";
+
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Museos estatales</title>
-
-  <!-- Bootstrap core CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>actualizar</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
-
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Museos de Morelia</span>
     <span class="site-heading-lower">Obras a través del tiempo</span>
   </h1>
-
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
       <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">PANDEMIX VIRTUAL TOUR</a>
@@ -63,101 +48,43 @@ include ("conexion.php");
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="5.registro.php">REGISTRATE</a>
+            <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
-            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
-          </li>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <main>
+    <form action="procesar_actualizar.php" method="POST" class="formulario" id="formulario">
+<table border="1"bgcolor="brown">
+<tr>
+<th>nombre</th>
+<th>e-mail</th>
+<th>password</th>
+<th>Rango</th>
+<th>operacion</th>
+</tr>
+<tr>
+  <?php $resultado= mysqli_query($conexion,$usuarios) or die(mysqli_error($conexion));
+    while($row = mysqli_fetch_assoc($resultado))  {?>
 
-<?php $resultado= mysqli_query($conexion,$usuarios) or die(mysqli_error($conexion));
-
- while($row = mysqli_fetch_assoc($resultado))  {?>
-  <section class="page-section">
-    <div class="container">
-      <div class="product-item">
-        <div class="product-item-title d-flex">
-          <div class="bg-faded p-5 d-flex ml-auto rounded">
-            <h2 class="section-heading mb-0">
-            
-            <span class="section-heading-lower">
-              <?php echo $row["nombre"];?>
-              </span> 
-            
-            </h2>
-          </div>
-        </div>
-         <a href="6.Obras.php?id=<?php echo $row["id_museo"];?>">
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src='<?php echo $row["enlace_img"];?>'alt=""></a>
-        <div class="product-item-description d-flex mr-auto">
-          <div class="bg-faded p-5 rounded">
-           <p class="table__item" class="mb-0">
-
-              <?php echo $row["direccion"];?><br>
-              <?php echo $row["horario_entrada"]." A ".$row["horario_salida"];?><br> 
-              
-              <?php echo $row["contacto"];?><br>
-              <?php echo $row["descripcion"];?><br>
-              
-              
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="container">
-      <div class="product-item">
-        <div class="product-item-title d-flex">
-          
-            <h2 class="section-heading mb-0">
-            <span class="section-heading-lower"> </span>
-            </h2>
-          </div>
-        </div>
-        <a href="6.obras.html">
-        </a>
-            <p class="mb-0"><br>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="container">
-      
-        <div class="product-item-title d-flex">
-          
-
-              <span class="section-heading-lower"> </span>
-            </h2>
-          
-        </div>
-        <a href="6.obras.html">
-      </a>
-        
-            <p class="mb-0">
-    
-</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<td>
+<input type="hidden" class="item"value="<?php echo $row["id_usuario"];?>">
+  <input type="text" class="item"value="<?php echo $row["nombre"];?>"></td>
+<td><input type="text" class="item"value="<?php echo $row["e_mail"];?>"></td>
+<td><input type="text" class="item"value="<?php echo $row["password"];?>"></td>
+<td><input type="text" class="item"value="<?php echo $row["rango"];?>"></td>
+<td><input type="submit" value="actualizar" class="item"></td>
+</tr>
 <?php } ?> 
-
-  <footer class="footer text-faded text-center py-5">
+</table>
+</form>
+</main>
+    <br>
+<footer class="footer text-faded text-center py-5">
     <div class="container">
       <h4><p class="m-0 small">&copy; Pandemix derechos reservados 2020</h4> </br><h2><h4>información:</h4></p>
       <strong><h5>Horario de atención:</h5></strong>Lunes a viernes: 9:00 a 14:00 y 16:00 a 18:00
@@ -184,7 +111,5 @@ Facebook: Casi todo el tiempo
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
