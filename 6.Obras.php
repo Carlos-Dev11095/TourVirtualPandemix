@@ -74,6 +74,9 @@ $id= $_GET["id"];
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
           </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="delete.php">ELIMINAR USUARIOS</a>
+          </li>
         </ul>
       </div>
     </div>

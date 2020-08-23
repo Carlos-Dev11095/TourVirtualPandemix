@@ -56,10 +56,13 @@ include ("conexion.php");
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
+            <a class="nav-link text-uppercase text-expanded" href="5.registro.php">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="delete.php">ELIMINAR USUARIOS</a>
           </li>
         </ul>
       </div>

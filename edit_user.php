@@ -56,7 +56,7 @@ include ("conexion.php");
     </div>
   </nav>
 	<main>
-		<form action="iniciar_cesion.php" method="POST" class="formulario" id="formulario">
+		<form action="actualizar.php" method="POST" class="formulario" id="formulario">
 <table border="1"bgcolor="brown">
 <tr>
 <th>nombre</th>
