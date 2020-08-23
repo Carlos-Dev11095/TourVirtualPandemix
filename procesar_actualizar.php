@@ -1,13 +1,13 @@
 <?php
 include ("conexion.php");
 
-$nombre = $_POST["id"];
+$id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $password = $_POST["password"];
 $Email = $_POST["correo"];
 $rango = "reg";
 
-$actualizar="UPDATE virtual_tour.usuarios set nombre="$nombre",password="$password",e_mail="$Email",rango="$rango" WHERE id_usuario='$id'";
+$actualizar="UPDATE virtual_tour.usuarios(nombre,e_mail,password,rango) VALUES ('$nombre', '$Email', '$password','$rango');";
 
 $resultado = mysqli_query($conexion, $actualizar);
 

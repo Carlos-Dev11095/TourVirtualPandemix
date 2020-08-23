@@ -1,4 +1,4 @@
-<?php
+ <?php
 include ("conexion.php");
 $id=$_GET["id"];
  $usuarios="select * from virtual_tour.usuarios WHERE id_usuario='$id'";
@@ -61,6 +61,7 @@ $id=$_GET["id"];
     <form action="procesar_actualizar.php" method="POST" class="formulario" id="formulario">
 <table border="1"bgcolor="brown">
 <tr>
+
 <th>nombre</th>
 <th>e-mail</th>
 <th>password</th>
@@ -73,10 +74,10 @@ $id=$_GET["id"];
 
 <td>
 <input type="hidden" class="item"value="<?php echo $row["id_usuario"];?>">
-  <input type="text" class="item"value="<?php echo $row["nombre"];?>"></td>
-<td><input type="text" class="item"value="<?php echo $row["e_mail"];?>"></td>
-<td><input type="text" class="item"value="<?php echo $row["password"];?>"></td>
-<td><input type="text" class="item"value="<?php echo $row["rango"];?>"></td>
+  <input type="text" class="item"value="<?php echo $row["nombre"];?>"name="nombre"></td>
+<td><input type="text" class="item"value="<?php echo $row["e_mail"];?>"name="e_mail"></td>
+<td><input type="text" class="item"value="<?php echo $row["password"];?>"name="password"></td>
+<td><input type="text" class="item"value="<?php echo $row["rango"];?>"name="rango"></td>
 <td><input type="submit" value="actualizar" class="item"></td>
 </tr>
 <?php } ?> 

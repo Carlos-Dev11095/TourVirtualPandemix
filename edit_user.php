@@ -1,7 +1,6 @@
 <?php
 include ("conexion.php");
  $usuarios="select * from virtual_tour.usuarios";
-
 ?>
 
 <!DOCTYPE html>
@@ -74,8 +73,8 @@ include ("conexion.php");
 <td><div class="item"><?php echo $row["e_mail"];?></div></td>
 <td><div class="item"><?php echo $row["password"];?></div></td>
 <td><div class="item"><?php echo $row["rango"];?></div></td>
-<td><a href="actualizar.php?id=<?php echo $row["id_usuario"];?>">editar</td>
-  </div></td>
+<td><a href="actualizar.php?id=<?php echo $row["id_usuario"];?>">editar</a>|<a href="actualizar.php?id=<?php echo $row["id_usuario"];?>">eliminar</td>
+
 </tr>
 <?php } ?> 
 </table>
