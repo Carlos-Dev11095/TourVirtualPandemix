@@ -3,12 +3,15 @@ session_start();
 include ("conexion.php");
 $correo = $_POST['correo'];
 $password = $_POST['password'];
+
 $_SESSION['user'] = $correo;
-$_SESSION['rango'] = $row["rango"];
 
 $rango = "SELECT rango from virtual_tour.usuarios WHERE e_mail = '$correo';";
 $resultado= mysqli_query($conexion,$rango) or die(mysqli_error($conexion));
+
     while($row = mysqli_fetch_assoc($resultado))
+    	$_SESSION['rango'] = $rango;
+
 $verifica = "SELECT COUNT(*) as contar from virtual_tour.usuarios where e_mail = '$correo' and password = '$password';";
 $consulta = mysqli_query($conexion,$verifica);
 $array = mysqli_fetch_array($consulta);

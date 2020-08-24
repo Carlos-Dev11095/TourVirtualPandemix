@@ -1,9 +1,9 @@
 <?php
 include ("conexion.php");
 session_start();
- $varsesion = $_SESSION['user'];
- if($varsesion == null || $varsesion = ''){
- echo "<script>alert('debes registrarte para ver esta pagina')</script>";
+ $varsesion = $_SESSION['rango'];
+ if($varsesion == null || $varsesion != 'adm'){
+ echo "<script>alert('Solo los administradores pueden acceder a esta pagina')</script>";
  die();
  header("Location:7.sesion.html");
   }
