@@ -14,7 +14,7 @@ if(!$resultado) {
     var_dump(mysqli_error($conexion));
     exit;
 }else {
-	header('Location:1.index.html');
+	header('Location:7.sesion.html');
 }
 
 ?>

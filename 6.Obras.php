@@ -3,8 +3,9 @@ include ("conexion.php");
 session_start();
  $varsesion = $_SESSION['user'];
  if($varsesion == null || $varsesion = ''){
-  echo "<script>alert('debes registrarte para ver esta pagina')</script>";
-  die();
+ echo "<script>alert('debes registrarte para ver esta pagina')</script>";
+ die();
+ header("Location:7.sesion.html");
   }
 $id= $_GET["id"];
 
@@ -73,9 +74,6 @@ $id= $_GET["id"];
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="delete.php">ELIMINAR USUARIOS</a>
           </li>
         </ul>
       </div>

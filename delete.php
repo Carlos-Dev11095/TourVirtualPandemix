@@ -61,9 +61,7 @@ include ("conexion.php");
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
           </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="delete.php">ELIMINAR USUARIOS</a>
-          </li>
+         
         </ul>
       </div>
     </div>
@@ -73,7 +71,7 @@ include ("conexion.php");
 
 
 
-
+<h2 class="subtitle">CONFIRMAR ELIMININACION</h2>
 
 
 <div class="container_table">

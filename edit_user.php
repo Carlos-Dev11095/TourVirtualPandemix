@@ -1,6 +1,14 @@
 <?php
 include ("conexion.php");
+session_start();
+ $varsesion = $_SESSION['user'];
+ if($varsesion == null || $varsesion = ''){
+ echo "<script>alert('debes registrarte para ver esta pagina')</script>";
+ die();
+ header("Location:7.sesion.html");
+  }
  $usuarios="select * from virtual_tour.usuarios";
+ 
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +54,7 @@ include ("conexion.php");
             <a class="nav-link text-uppercase text-expanded" href="4.contacto.php">CONTACTO</a>
           </li>
            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="5.registro.html">REGISTRATE</a>
+            <a class="nav-link text-uppercase text-expanded" href="5.registro.php">REGISTRATE</a>
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>

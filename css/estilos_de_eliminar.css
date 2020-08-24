@@ -32,3 +32,8 @@ grid-auto-rows: 50px;
 	font-size: 1.2em;
 
 }
+.subtitle{
+	color: white;
+	margin: 50px auto;
+	justify-content: center;
+}
