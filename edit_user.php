@@ -59,6 +59,7 @@ include ("conexion.php");
 		<form action="actualizar.php" method="POST" class="formulario" id="formulario">
 <table border="1"bgcolor="brown">
 <tr>
+<th>Id</th>
 <th>nombre</th>
 <th>e-mail</th>
 <th>password</th>
@@ -69,11 +70,12 @@ include ("conexion.php");
   <?php $resultado= mysqli_query($conexion,$usuarios) or die(mysqli_error($conexion));
     while($row = mysqli_fetch_assoc($resultado))  {?>
 
+<td><div class="item"><?php echo $row["id_usuario"];?></div></td>
 <td><div class="item"><?php echo $row["nombre"];?></div></td>
 <td><div class="item"><?php echo $row["e_mail"];?></div></td>
 <td><div class="item"><?php echo $row["password"];?></div></td>
 <td><div class="item"><?php echo $row["rango"];?></div></td>
-<td><a href="actualizar.php?id=<?php echo $row["id_usuario"];?>">editar</a>|<a href="actualizar.php?id=<?php echo $row["id_usuario"];?>">eliminar</td>
+<td><a href="actualizar.php?id=<?php echo $row["id_usuario"];?>">editar</a>|<a href="delete.php?id=<?php echo $row["id_usuario"];?>">eliminar</td>
 
 </tr>
 <?php } ?> 

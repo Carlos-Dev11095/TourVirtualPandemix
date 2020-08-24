@@ -73,18 +73,18 @@ $id=$_GET["id"];
     while($row = mysqli_fetch_assoc($resultado))  {?>
 
 <td>
-<input type="hidden" class="item"value="<?php echo $row["id_usuario"];?>">
-  <input type="text" class="item"value="<?php echo $row["nombre"];?>"name="nombre"></td>
-<td><input type="text" class="item"value="<?php echo $row["e_mail"];?>"name="e_mail"></td>
-<td><input type="text" class="item"value="<?php echo $row["password"];?>"name="password"></td>
-<td><input type="text" class="item"value="<?php echo $row["rango"];?>"name="rango"></td>
+<input type="hidden" class="item" name="id" id="id" value="<?php echo $row["id_usuario"];?>">
+  <input type="text" class="item"  id="nombre" value="<?php echo $row["nombre"];?>"name="nombre"></td>
+<td><input type="text" class="item"  id="e_mail" value="<?php echo $row["e_mail"];?>"name="e_mail"></td>
+<td><input type="text" class="item"  id="password" value="<?php echo $row["password"];?>"name="password"></td>
+<td><input type="text" class="item"  id="rango" value="<?php echo $row["rango"];?>"name="rango"></td>
 <td><input type="submit" value="actualizar" class="item"></td>
 </tr>
 <?php } ?> 
 </table>
 </form>
 </main>
-    <br>
+    <br>  
 <footer class="footer text-faded text-center py-5">
     <div class="container">
       <h4><p class="m-0 small">&copy; Pandemix derechos reservados 2020</h4> </br><h2><h4>información:</h4></p>
