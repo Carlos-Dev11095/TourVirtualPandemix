@@ -1,13 +1,13 @@
 <?php
 include ("conexion.php");
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $password = $_POST["password"];
-$Email = $_POST["correo"];
+$e_mail = $_POST["e_mail"];
 $rango = $_POST["rango"];
 
-$actualizar="UPDATE virtual_tour.usuarios set nombre = '$nombre' ,  e_mail = '$e_mail', PASSWORD = '$password', rango = '$rango' WHERE id_usuario = '$id'";
+$actualizar="UPDATE virtual_tour.usuarios set nombre = '$nombre' ,  e_mail = '$e_mail', password = '$password', rango = '$rango' WHERE id_usuario = '$id'";
 
 $resultado = mysqli_query($conexion, $actualizar);
 

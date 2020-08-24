@@ -56,7 +56,7 @@ include ("conexion.php");
     </div>
   </nav>
 	<main>
-		<form action="actualizar.php" method="POST" class="formulario" id="formulario">
+	
 <table border="1"bgcolor="brown">
 <tr>
 <th>Id</th>
@@ -80,7 +80,7 @@ include ("conexion.php");
 </tr>
 <?php } ?> 
 </table>
-</form>
+
 </main>
 		<br>
 <footer class="footer text-faded text-center py-5">

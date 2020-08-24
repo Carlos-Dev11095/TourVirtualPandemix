@@ -3,6 +3,11 @@ include ("conexion.php");
 $id=$_GET["id"];
  $usuarios="select * from virtual_tour.usuarios WHERE id_usuario='$id'";
 
+if ($usuarios == null) {
+  echo "string";
+}else{
+  echo "perra";
+}
 ?>
 
 <!DOCTYPE html>
@@ -75,12 +80,14 @@ $id=$_GET["id"];
 <td>
 <input type="hidden" class="item" name="id" id="id" value="<?php echo $row["id_usuario"];?>">
   <input type="text" class="item"  id="nombre" value="<?php echo $row["nombre"];?>"name="nombre"></td>
-<td><input type="text" class="item"  id="e_mail" value="<?php echo $row["e_mail"];?>"name="e_mail"></td>
+<td><input type="text" class="item"  id="e_mail" value="<?php echo $row["e_mail"];?>" name="e_mail"></td>
 <td><input type="text" class="item"  id="password" value="<?php echo $row["password"];?>"name="password"></td>
 <td><input type="text" class="item"  id="rango" value="<?php echo $row["rango"];?>"name="rango"></td>
 <td><input type="submit" value="actualizar" class="item"></td>
 </tr>
-<?php } ?> 
+<?php }
+
+ ?> 
 </table>
 </form>
 </main>
