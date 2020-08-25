@@ -2,8 +2,7 @@
 SQLyog Professional v12.09 (64 bit)
 MySQL - 5.7.31-0ubuntu0.16.04.1 : Database - virtual_tour
 *********************************************************************
-*/
-
+*/
 /*!40101 SET NAMES utf8 */;
 
 /*!40101 SET SQL_MODE=''*/;
