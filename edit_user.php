@@ -5,7 +5,7 @@ session_start();
  if($varsesion == null || $varsesion != 'adm'){
 
  echo "<script>alert('Solo los administradores pueden entrar a esta pagina')</script>";
- echo "<a href= '1.index.html'>VOLVER A INICIO</a>";
+ echo "<a href= 'index.html'>VOLVER A INICIO</a>";
  die();
 
   }
@@ -43,7 +43,7 @@ session_start();
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="1.index.html">INICIO
+            <a class="nav-link text-uppercase text-expanded" href="index.html">INICIO
               <span class="sr-only">(current)</span>
             </a>
           </li>

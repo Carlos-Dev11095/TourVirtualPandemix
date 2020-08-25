@@ -39,7 +39,7 @@ if ($usuarios == null) {
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="1.index.html">INICIO
+            <a class="nav-link text-uppercase text-expanded" href="index.html">INICIO
               <span class="sr-only">(current)</span>
             </a>
           </li>

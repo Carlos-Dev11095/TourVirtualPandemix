@@ -30,7 +30,7 @@ if(!$consulta) {
 
 
 if ($array['contar']>0){
-	header("location:1.index.html");
+	header("location:index.html");
  $_SESSION['user'] = $correo ;
  echo "<script>alert('sesion iniciada')</script>";
 }else{
