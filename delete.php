@@ -1,9 +1,19 @@
 <?php
 include ("conexion.php");
+
+
+session_start();
+ $varsesion = $_SESSION['rango'];
+ if($varsesion == null || $varsesion != 'adm'){
+
+ echo "<script>alert('Solo los administradores pueden entrar a esta pagina')</script>";
+ echo "<a href= '1.index.html'>VOLVER A INICIO</a>";
+ die();
+
+  }
+
+
  $usuarios="select * from virtual_tour.usuarios";
-
-
-
 ?>
 
 

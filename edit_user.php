@@ -4,12 +4,12 @@ session_start();
  $varsesion = $_SESSION['rango'];
  if($varsesion == null || $varsesion != 'adm'){
 
- echo "<pre>";
- print_r($varsesion);
- echo "</pre>";
+ echo "<script>alert('Solo los administradores pueden entrar a esta pagina')</script>";
+ echo "<a href= '1.index.html'>VOLVER A INICIO</a>";
  die();
- header("Location:7.sesion.html");
+
   }
+
  $usuarios="select * from virtual_tour.usuarios";
  
 ?>
