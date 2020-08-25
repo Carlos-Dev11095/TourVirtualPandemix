@@ -6,11 +6,19 @@ $password = $_POST['password'];
 
 $_SESSION['user'] = $correo;
 
+
 $rango = "SELECT rango from virtual_tour.usuarios WHERE e_mail = '$correo';";
 $resultado= mysqli_query($conexion,$rango) or die(mysqli_error($conexion));
+    
+    $_SESSION['rango'] = $resultado;
 
-    while($row = mysqli_fetch_assoc($resultado))
-    	$_SESSION['rango'] = $rango;
+
+    
+
+
+
+
+    	
 
 $verifica = "SELECT COUNT(*) as contar from virtual_tour.usuarios where e_mail = '$correo' and password = '$password';";
 $consulta = mysqli_query($conexion,$verifica);

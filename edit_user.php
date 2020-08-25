@@ -3,7 +3,10 @@ include ("conexion.php");
 session_start();
  $varsesion = $_SESSION['rango'];
  if($varsesion == null || $varsesion != 'adm'){
- echo "<script>alert('Solo los administradores pueden acceder a esta pagina')</script>";
+
+ echo "<pre>";
+ print_r($varsesion);
+ echo "</pre>";
  die();
  header("Location:7.sesion.html");
   }
