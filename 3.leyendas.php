@@ -1,13 +1,8 @@
 <?php
 include ("conexion.php");
- $usuarios="select * from virtual_tour.museos_y_sitios";
+ $usuarios="select * from virtual_tour.leyendas";
 ?>
-
-
-
-
-
-
+ 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,8 +12,7 @@ include ("conexion.php");
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>Museos estatales</title>
+  <title>leyendas de la comunidad</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -67,7 +61,8 @@ include ("conexion.php");
           </li>
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
-            <li class="nav-item px-lg-4">
+          </li>
+          <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
           </li>
         </ul>
@@ -81,80 +76,32 @@ include ("conexion.php");
   <section class="page-section">
     <div class="container">
       <div class="product-item">
-        <div class="product-item-title d-flex">
+        
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-            
-            <span class="section-heading-lower">
-              <?php echo $row["nombre"];?>
-              </span> 
-            
-            </h2>
-          </div>
+              <span class="section-heading-upper"><?php echo $row["origen"];?></span>            
+              <span class="section-heading-lower"><?php echo $row["nombre"];?></span>
         </div>
-         <a href="6.Obras.php?id=<?php echo $row["id_museo"];?>">
-        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src='<?php echo $row["enlace_img"];?>'alt=""></a>
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src= '<?php echo $row["enlace_img"];?>' alt="">
         <div class="product-item-description d-flex mr-auto">
-          <div class="bg-faded p-5 rounded">
-           <p class="table__item" class="mb-0">
-
-              <?php echo $row["direccion"];?><br>
-              <?php echo $row["horario_entrada"]." A ".$row["horario_salida"];?><br> 
-              
-              <?php echo $row["contacto"];?><br>
-              <?php echo $row["descripcion"];?><br>
+          <div  class="bg-faded p-5 rounded">
+            <p class="table__item" class="mb-0">
+              <?php echo $row["descripcion"];?>
               
               
+               
+  
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="container">
-      <div class="product-item">
-        <div class="product-item-title d-flex">
-          
-            <h2 class="section-heading mb-0">
-            <span class="section-heading-lower"> </span>
-            </h2>
-          </div>
-        </div>
-        <a href="6.obras.html">
-        </a>
-            <p class="mb-0"><br>
 
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="container">
-      
-        <div class="product-item-title d-flex">
-          
-
-              <span class="section-heading-lower"> </span>
-            </h2>
-          
-        </div>
-        <a href="6.obras.html">
-      </a>
-        
-            <p class="mb-0">
-    
-</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<?php } ?> 
+  <?php } ?>    
+  
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
