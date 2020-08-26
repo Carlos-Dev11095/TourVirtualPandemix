@@ -4,9 +4,10 @@ var nombre = document.getElementById('nombre');
 var password = document.getElementById('password');
 var password2 = document.getElementById('password2');
 var correo = document.getElementById('correo');
-var boton = document.getElementById('boton');
+var boton_registro = document.getElementById('boton_registro');
+var formulario_registro = document.getElementById('formulario_registro');
 
-boton.addEventListener('click',() => validarFormulario());
+boton_registro.addEventListener('click',() => validarFormulario());
 
 function validarFormulario(){
          var valorn = nombre.value;
@@ -15,17 +16,18 @@ function validarFormulario(){
          var valorc = correo.value;
       
       if (valorn == '' || valorn.length > 50 ){
-      	alert('el nombre esta vacio o tiene demasiados caracteres');
-      	return false;
+      	alert('El nombre esta vacio o tiene mas de 50 caracteres');
+         formulario_registro.action = '';
+      	
       }else if (valorp1 == '' || valorp2 == ''  ){
       	alert('el password esta vacio o o su confirmacion');
-      	return false;
+      	formulario_registro.action = '';
       }else if (valorp1 != valorp2 ){
       	alert('el password no es igual');
-      	return false;
+      	formulario_registro.action = '';
       }else if (valorc == '' || valorn.length > 50 ){
       	alert('el correo esta vacio o tiene demasiados caracteres');
-      	return false;
+      	formulario_registro.action = '';
       }else {
  alert('enviado');
  valorn = '';

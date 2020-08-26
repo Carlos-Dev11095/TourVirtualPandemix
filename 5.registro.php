@@ -72,7 +72,7 @@ session_start();
   </nav>
 
 	<main>
-		<form action="registrar.php" method="POST" class="formulario" id="formulario">
+		<form action="registrar.php" method="POST" class="formulario" id="formulario_registro">
 			<!-- Grupo: Usuario -->
 			
 
@@ -124,7 +124,7 @@ session_start();
 			<!-- Grupo: Terminos y Condiciones -->
 			
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn" id="boton">Registrate</button>
+				<button type="submit" class="formulario__btn" id="boton_registro">Registrate</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 		</form>
