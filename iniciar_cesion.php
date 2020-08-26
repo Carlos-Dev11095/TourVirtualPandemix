@@ -7,13 +7,14 @@ $password = $_POST['password'];
 $_SESSION['user'] = $correo;
 
 
-$rango = "SELECT rango from virtual_tour.usuarios WHERE e_mail = '$correo';";
+$rango = "SELECT nombre,rango from virtual_tour.usuarios WHERE e_mail = '$correo';";
 $resultado= mysqli_query($conexion,$rango) or die(mysqli_error($conexion));
     while($row = mysqli_fetch_assoc($resultado))  {
     $_SESSION['rango'] = $row['rango'];
+    $_SESSION['name'] = $row['nombre'];
+    
 
 }
-    
 
 
 
