@@ -1,6 +1,7 @@
 <?php
 include ("conexion.php");
-
+session_start();
+ $varsesion_nombre = $_SESSION['name'];
 
 
 
@@ -66,6 +67,15 @@ include ("conexion.php");
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
           </li>
+           <?php 
+          if($varsesion_nombre != null || $varsesion_nombre != ''){ ?>
+ 
+ <li class="nav-link text-uppercase text-expanded"><?php echo "USUARIO: ".$varsesion_nombre; ?></li>
+ 
+  <?php }
+    
+
+           ?>
          
         </ul>
       </div>
