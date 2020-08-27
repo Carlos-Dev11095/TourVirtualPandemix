@@ -1,3 +1,10 @@
+<?php
+include ("conexion.php");
+session_start();
+ $varsesion_nombre = $_SESSION['name'];
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -66,6 +73,15 @@
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
           </li>
+          <?php 
+          if($varsesion_nombre != null || $varsesion_nombre != ''){ ?>
+ 
+ <li class="nav-link text-uppercase text-expanded"><?php echo "USUARIO: ".$varsesion_nombre; ?></li>
+ 
+  <?php }
+    
+
+           ?>
         </ul>
       </div>
     </div>

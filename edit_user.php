@@ -2,6 +2,7 @@
 include ("conexion.php");
 session_start();
  $varsesion = $_SESSION['rango'];
+ $varsesion_nombre = $_SESSION['name'];
  if($varsesion == null || $varsesion != 'adm'){
 
  echo "<script>alert('Solo los administradores pueden entrar a esta pagina')</script>";
@@ -62,6 +63,15 @@ session_start();
            <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="7.sesion.html">INICIA SESION</a>
           </li>
+          <?php 
+          if($varsesion_nombre != null || $varsesion_nombre != ''){ ?>
+ 
+ <li class="nav-link text-uppercase text-expanded"><?php echo "USUARIO: ".$varsesion_nombre; ?></li>
+ 
+  <?php }
+    
+
+           ?>
         </ul>
       </div>
     </div>

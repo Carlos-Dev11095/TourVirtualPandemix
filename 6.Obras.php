@@ -1,6 +1,7 @@
 <?php
 include ("conexion.php");
 session_start();
+$varsesion_nombre = $_SESSION['name'];
  $varsesion = $_SESSION['user'];
  if($varsesion == null || $varsesion = ''){
  echo "<script>alert('debes registrarte para ver esta pagina')</script>";
@@ -75,6 +76,15 @@ $id= $_GET["id"];
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="edit_user.php">EDITAR USUARIOS</a>
           </li>
+           <?php 
+          if($varsesion_nombre != null || $varsesion_nombre != ''){ ?>
+ 
+ <li class="nav-link text-uppercase text-expanded"><?php echo "USUARIO: ".$varsesion_nombre; ?></li>
+ 
+  <?php }
+    
+
+           ?>
         </ul>
       </div>
     </div>
